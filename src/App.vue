@@ -1,5 +1,9 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
+import { wasm } from './main.ts'
+console.log(wasm)
+
+
 </script>
 
 <template>
