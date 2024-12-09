@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "wasm": "wasm-pack build wasm -d ../pkg",
     "build": "vue-tsc -b && vite build",
     "preview": "vite preview"
   },
@@ -15,6 +16,7 @@
     "@vitejs/plugin-vue": "^5.1.4",
     "typescript": "~5.6.2",
     "vite": "^5.4.10",
-    "vue-tsc": "^2.1.8"
+    "vue-tsc": "^2.1.8",
+    "vite-plugin-wasm": "^3.3"
   }
 }
