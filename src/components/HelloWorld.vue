@@ -9,30 +9,33 @@ const count = ref(0)
 
 <template>
   <h1>{{ msg }}</h1>
-
+  <p class="read-the-docs">Click on the WASM-pack, Rust, wasm-bindgen and Vue logos to learn more</p>
   <div class="card">
     <button type="button" @click="count = wasm.increment(count)">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
+    <p style="text-align: left;">
+      In HTML<br>
+      <span style="margin-right: 2em;">SCRIPT</span>   const count = ref(0)<br>
+      TEMPLATE &ltbutton type="button" @click="count = wasm.increment(count)"&gtcount is &#123;&#123; count &#125;&#125;&lt/button&gt<br><br>
+      In Rust and wasm-bindgen ** all numbers are f64
+      <pre>
+#[wasm_bindgen]
+pub fn increment(num: JsValue) -&gt Result&ltf64, JsError&gt  {
+  match num.as_f64() {
+    Some(n) => {
+      console::log_1(&num);
+      Ok(n + 1.0)
+    },
+    None => Err(JsError::new("Invalid Parameter"))
+  }
+}
+</pre>
     </p>
   </div>
-
+<div>
   <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
+    Use the debugger console to see the Rust/WASM console::log
   </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+</div>>
 </template>
 
 <style scoped>

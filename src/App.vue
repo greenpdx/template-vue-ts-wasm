@@ -8,14 +8,20 @@ console.log(wasm)
 
 <template>
   <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    <a href="https://rustwasm.github.io/wasm-pack/book/" target="_blank">
+      <img src="./assets/wasm-ferris.png" class="logo" alt="Wasm-pack logo" />
+    </a>
+    <a href="https://www.rust-lang.org/" target="_blank">
+      <img src="./assets/rustlogo.svg" class="logo vue" alt="Rust logo" />
+    </a>
+    <a href="https://rustwasm.github.io/docs/wasm-bindgen/" target="_blank">
+      <img src="./assets/rustwasm.png" class="logo vue" alt="Vue logo" />
     </a>
     <a href="https://vuejs.org/" target="_blank">
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <HelloWorld msg="WASM-pack + Rust + bindgen + Vue" />
 </template>
 
 <style scoped>
