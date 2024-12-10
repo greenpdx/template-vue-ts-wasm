@@ -1,6 +1,6 @@
-# wasm-pack + Rust + wasn-bindgen + Vue (plus Typescript and Vite)
+# wasm-pack + Rust + wasm-bindgen + Vue (plus Typescript and Vite)
 
-This template should help get you started developing WASM modules written in Rustwith Vue 3 and TypeScript in Vite.<br>
+This template should help get you started developing WASM modules written in Rust with Vue 3 and TypeScript in Vite.<br>
 The template uses<br>
    * Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.<br>
    * wasm-pack is used to compile Rust to WASM [wasm-pack](https://rustwasm.github.io/wasm-pack/book/) for more information<br>
