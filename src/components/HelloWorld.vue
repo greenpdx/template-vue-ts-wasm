@@ -17,7 +17,9 @@ const count = ref(0)
       <span style="margin-right: 2em;">SCRIPT</span>   const count = ref(0)<br>
       TEMPLATE &ltbutton type="button" @click="count = wasm.increment(count)"&gtcount is &#123;&#123; count &#125;&#125;&lt/button&gt<br><br>
       In Rust and wasm-bindgen ** all numbers are f64
-      <pre>
+    </p>
+
+      <pre style="text-align: left;">
 #[wasm_bindgen]
 pub fn increment(num: JsValue) -&gt Result&ltf64, JsError&gt  {
   match num.as_f64() {
@@ -29,7 +31,6 @@ pub fn increment(num: JsValue) -&gt Result&ltf64, JsError&gt  {
   }
 }
 </pre>
-    </p>
   </div>
 <div>
   <p>
